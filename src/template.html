@@ -457,7 +457,7 @@ var FS=[
 '    vec3 duo=l<.5?mix(vec3(.1,.07,.05),vec3(.55,.3,.1),l*2.):mix(vec3(.82,.6,.22),PAPER,(l-.5)*2.);',
 '    vec3 art=mix(vid,duo,.6);',
 '    art=mix(art,vec3(.62,.09,.1),clamp((vid.r-max(vid.g,vid.b))*2.2-.25,0.,1.)*.5);',
-'    art=engrave(art,p,.9);',
+'    art=engrave(art,p,.72);',
 '    art=mix(art,INK,smoothstep(.035,.11,lb-lum(vid))*.75);',
 '    art*=1.-.4*smoothstep(-.08,0.,d);',
 '    float aa=.0022;',
@@ -684,7 +684,7 @@ var packs=[].slice.call(document.querySelectorAll('canvas.pack'));
    shot index · plate · crop centre and zoom · where it floats (centre, % of stage) · width · when (a to b of the hold) */
 var INSETS=[
  {s:1,img:'beard',c:[.86,.4],z:3.3,at:[13,33],w:'clamp(96px,15vw,210px)',ar:4/3,a:.1,b:.78,rot:-3,depth:1},
- {s:1,img:'pilgrim',c:[.12,.52],z:3.2,at:[87,52],w:'clamp(86px,12vw,170px)',ar:4/3,a:.34,b:.95,rot:2.5,depth:1.7},
+ {s:1,img:'pilgrim',c:[.12,.52],z:3.2,at:[85,38],w:'clamp(86px,12vw,170px)',ar:4/3,a:.34,b:.95,rot:2.5,depth:1.7},
  {s:2,img:'beans',c:[.5,.5],z:1.25,at:[15,34],w:'clamp(96px,15vw,220px)',ar:1,a:.38,b:1,rot:0,depth:1.5,round:1,spin:70},
  {s:4,img:'sunwall',c:[.9,.56],z:3.2,at:[87,60],w:'clamp(90px,13vw,190px)',ar:4/3,a:.03,b:.46,rot:3,depth:1.6},
  {s:4,img:'triptych',c:[.47,.52],z:3.4,at:[12,44],w:'clamp(90px,13vw,190px)',ar:1,a:.14,b:.56,rot:-2.5,depth:1},
